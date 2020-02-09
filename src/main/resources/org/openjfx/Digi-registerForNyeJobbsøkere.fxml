@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="600.0" style="-fx-background-color: #583d0a;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DigiregisterForNyeJobbsøkereController">
+   <children>
+      <Label fx:id="navnLabel" layoutX="42.0" layoutY="33.0" text="Navn" textFill="#fcf7f7">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="fødeLabel" layoutX="37.0" layoutY="68.0" text="Fødselsdato" textFill="#f9f2f2">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="tlfLabel" layoutX="34.0" layoutY="110.0" text="Telefon" textFill="#f9f6f6">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="adresseLabel" layoutX="33.0" layoutY="154.0" text="Adresse" textFill="#f0efef">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="jobbKategoriLabel" layoutX="33.0" layoutY="202.0" onKeyReleased="#kontaktJobbKategoriValidation" text="Ønsket jobb-katekori" textFill="#f0efef">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="utdannesleLabel" layoutX="38.0" layoutY="251.0" text="Utdannelse" textFill="#f0efef">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lønnskravLabel" layoutX="39.0" layoutY="298.0" text="Lønnskrav" textFill="#f0efef">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="jobbErfaringLabel" layoutX="32.0" layoutY="347.0" text="Jobb erfaring" textFill="#f0efef">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="referanserLabel" layoutX="41.0" layoutY="444.0" text="Referanser" textFill="#f0efef">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="kontaktNavn" layoutX="236.0" layoutY="30.0" onKeyReleased="#kontaktnavnValidation" prefHeight="25.0" prefWidth="163.0" />
+      <TextField fx:id="tlf" layoutX="236.0" layoutY="117.0" onKeyReleased="#kontaktTelefonValidation" prefHeight="25.0" prefWidth="163.0" promptText="8 siffer" />
+      <TextField fx:id="lønn" layoutX="233.0" layoutY="295.0" onKeyReleased="#kontaktLønnskravValidation" prefHeight="25.0" prefWidth="163.0" />
+      <TextField fx:id="adresse" layoutX="236.0" layoutY="161.0" onKeyReleased="#kontaktAdresseValidation" prefHeight="25.0" prefWidth="163.0" />
+      <ChoiceBox fx:id="jobbKategori" layoutX="236.0" layoutY="199.0" prefHeight="25.0" prefWidth="163.0" />
+      <ChoiceBox fx:id="utdannelse" layoutX="236.0" layoutY="248.0" onKeyReleased="#kontaktUtdannelseValidation" prefHeight="25.0" prefWidth="163.0" />
+      <DatePicker fx:id="føde" layoutX="234.0" layoutY="75.0" onAction="#displayFøde" onKeyReleased="#kontaktKalenderValidation" prefHeight="25.0" prefWidth="163.0" promptText="Velg dato" />
+      <TextArea fx:id="erfaring" layoutX="234.0" layoutY="347.0" onKeyReleased="#kontaktJobbErfaringValidation" prefHeight="71.0" prefWidth="163.0" />
+      <TextArea fx:id="referanser" layoutX="236.0" layoutY="454.0" onKeyReleased="#kontaktReferanserValidation" prefHeight="71.0" prefWidth="163.0" />
+      <Button fx:id="digiReg" layoutX="95.0" layoutY="565.0" mnemonicParsing="false" onAction="#digiRegButtonPushed" prefHeight="37.0" prefWidth="118.0" style="-fx-background-color: #af7e0d;" text="Register" textFill="#fff9f9">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="digiTable" layoutX="256.0" layoutY="565.0" mnemonicParsing="false" onAction="#digiTableButtonPushed" prefHeight="37.0" prefWidth="118.0" style="-fx-background-color: #af7e0d;" text="TableView" textFill="#fff9f9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="Hoved" layoutX="399.0" layoutY="565.0" mnemonicParsing="false" onAction="#hovedButtonPushed" prefHeight="37.0" prefWidth="118.0" style="-fx-background-color: #af7e0d;" text="Hoved" textFill="#fff9f9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
